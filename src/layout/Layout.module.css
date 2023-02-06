@@ -1,0 +1,99 @@
+@import '@code-hike/mdx/dist/index.css';
+.wrapper {
+	display: grid;
+	grid-template-columns: 200px minmax(320px, auto);
+	grid-template-rows: 1fr auto;
+	grid-template-areas: "header header" "sidebar main";
+}
+
+.header {
+	grid-area: header;
+}
+
+.sidebar {
+	grid-area: sidebar;
+}
+
+.main {
+	grid-area: main;
+	padding: 0 200px;
+}
+
+div {
+	font-size: 18px !important;
+}
+
+div {
+	color: #bbd1ea;
+}
+
+code, h1, h2, p, ul, div{
+	margin-bottom: 20px;
+}
+
+code {
+	font-size: 16px;
+	border-radius: 5px;
+	background-color: #1b263b;
+	padding: 2px 4px;
+}
+
+ul, ol {
+	font-weight: 300;
+	line-height: 20px;
+}
+
+ul {
+	margin: 20px 0 20px 20px;
+	list-style: disc;
+}
+
+ol {
+	margin: 20px 0 20px 20px;
+	list-style: list;
+}
+
+p, li {
+	margin: 12px 0;
+}
+
+p {
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 25px;
+}
+
+a {
+	text-decoration: none;
+	color: #3a6ea5;
+}
+
+a:hover {
+	color: #C4CEF4;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	margin: 20px 0 20px 0;
+}
+
+h1 {
+	font-weight: 700;
+	font-size: 30px;
+	margin-top: 10px
+}
+
+h2 {
+	font-weight: 500;
+	font-size: 25px;
+	margin-top: 50px;
+}
+
+h3 {
+	font-weight: 500;
+	font-size: 18px;
+	margin: 0 0 20px 0;
+}
+
+h4 {
+	margin: 40px 0 0 0;
+}

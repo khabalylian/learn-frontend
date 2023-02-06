@@ -1,0 +1,41 @@
+.menu {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 200px;
+	background-color: inherit;
+	text-align: center;
+	cursor: pointer;
+}
+
+.title, .subTitle {
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+
+.title {
+	font-weight: 700;
+}
+
+.subTitle {
+	margin: 20px 0;
+}
+
+.subTitle a {
+	font-size: 20px;
+	font-weight: 500;
+}
+
+.itemMenu {
+	font-size: 18px;
+	font-weight: 300;
+	margin: 10px 0;
+}
+
+.active a{
+	color: #bbd1ea;
+}
+
+.borderActive a{
+	border-bottom: 1px solid #bbd1ea;
+}

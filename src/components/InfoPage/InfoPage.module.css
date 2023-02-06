@@ -1,0 +1,14 @@
+.infoPage {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.infoPage p {
+	margin: 0;
+}
+
+.author {
+	padding: 0;
+	margin: 5px;
+}
