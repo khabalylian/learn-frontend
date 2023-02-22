@@ -5,10 +5,13 @@
 }
 
 .infoPage p {
+	display: flex;
+	flex-direction: column;
 	margin: 0;
 }
 
 .author {
+	font-size: 0.65em;
 	padding: 0;
-	margin: 5px;
+	margin: 0.18em 0;
 }

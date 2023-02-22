@@ -1,7 +1,7 @@
 @import '@code-hike/mdx/dist/index.css';
 .wrapper {
 	display: grid;
-	grid-template-columns: 200px minmax(320px, auto);
+	grid-template-columns: 285px minmax(320px, auto);
 	grid-template-rows: 1fr auto;
 	grid-template-areas: "header header" "sidebar main";
 }
@@ -16,50 +16,66 @@
 
 .main {
 	grid-area: main;
-	padding: 0 200px;
+	padding: 0 calc(var(--index) * 5);
 }
 
-div {
-	font-size: 18px !important;
+.main code, .main h1, .main h2, .main p, .main ul, .main div{
+	margin-bottom: 0.8em;
 }
 
-div {
-	color: #bbd1ea;
-}
-
-code, h1, h2, p, ul, div{
-	margin-bottom: 20px;
-}
-
-code {
-	font-size: 16px;
-	border-radius: 5px;
+.main code {
+	font-size: 0.9em;
+	color: #d3c4b0;
 	background-color: #1b263b;
+	letter-spacing: 1px;
+	border-radius: 5px;
 	padding: 2px 4px;
 }
 
-ul, ol {
+.main ul, ol {
 	font-weight: 300;
 	line-height: 20px;
+	margin: 1em 0 1em 1em;
 }
 
-ul {
-	margin: 20px 0 20px 20px;
+.main ul {
 	list-style: disc;
 }
 
-ol {
-	margin: 20px 0 20px 20px;
+.main ol {
 	list-style: list;
 }
 
-p, li {
+.main p, li {
+	font-size: 18px;
 	margin: 12px 0;
+}
+
+.main h1,h2,h4,h5,h6 {
+	margin: 20px 0 20px 0;
+}
+
+.main h1 {
+	font-weight: 700;
+	font-size: 1.07em;
+}
+
+.main h2 {
+	font-weight: 500;
+	font-size: 0.9em;
+	margin-top: 1.78em;
+}
+
+.main h3 {
+	font-size: 18px;
+}
+
+.main h4 {
+	font-size: 0.7em;
 }
 
 p {
 	font-weight: 300;
-	font-size: 16px;
 	line-height: 25px;
 }
 
@@ -70,30 +86,4 @@ a {
 
 a:hover {
 	color: #C4CEF4;
-}
-
-h1,h2,h3,h4,h5,h6 {
-	margin: 20px 0 20px 0;
-}
-
-h1 {
-	font-weight: 700;
-	font-size: 30px;
-	margin-top: 10px
-}
-
-h2 {
-	font-weight: 500;
-	font-size: 25px;
-	margin-top: 50px;
-}
-
-h3 {
-	font-weight: 500;
-	font-size: 18px;
-	margin: 0 0 20px 0;
-}
-
-h4 {
-	margin: 40px 0 0 0;
 }

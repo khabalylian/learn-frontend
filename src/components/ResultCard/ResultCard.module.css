@@ -1,0 +1,42 @@
+.resultCard {
+	background-color: #1b263b;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+.labelItem {
+	font-size: 0.8em;
+}
+
+.example {
+	margin: 20px 0;
+	padding: 20px 0;
+	border-bottom: 1px solid black;
+	border-top: 1px solid black;
+}
+
+.wrapper input {
+	appearance: auto;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.true {
+	border: 2px solid green;
+}
+
+.false {
+	border: 2px solid red;
+}
+
+.textFalse {
+	color: red;
+}
+
+.textTrue {
+color: green;
+}

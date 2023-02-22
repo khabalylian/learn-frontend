@@ -1,3 +1,4 @@
 .editArea {
 	outline: 0;
+	white-space: pre-line;
 }

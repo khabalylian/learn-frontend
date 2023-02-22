@@ -1,9 +1,10 @@
-import '@code-hike/mdx/dist/index.css';
 import { withLayout } from './layout/Layout';
 import { Main } from './page-component/Main/Main';
+import { Test } from './page-component/Test';
 import { Route, Routes} from 'react-router-dom';
 
-function App() {
+
+const App = (): JSX.Element => {
 
     return (
         <Routes>
@@ -14,6 +15,7 @@ function App() {
                 element={<h2>Виберіть тему для вивчення!</h2>}
             />
             <Route path=':id/:title/:typeId' element={<Main />} />
+			<Route path='test/:select' element={<Test/>} />
         </Routes>
     );
 }

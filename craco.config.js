@@ -6,13 +6,15 @@ module.exports = {
         configure: webpackConfig => {
             addAfterLoader(webpackConfig, loaderByName('babel-loader'), {
                 test: /\.(md|mdx)$/,
-                loader: require.resolve('@mdx-js/loader')
+                loader: require.resolve('@mdx-js/loader'),
             });
 
             return webpackConfig;
-        }
+        },
+		
     },
     devServer: {
         port: 5000
-    }
+    },
+
 };

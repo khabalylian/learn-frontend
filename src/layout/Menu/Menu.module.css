@@ -2,34 +2,43 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	width: 200px;
 	background-color: inherit;
 	text-align: center;
 	cursor: pointer;
 }
 
+.secondBlock,
+.secondLevelBlock {
+	overflow: hidden;
+}
+
+.firstBlock,
+.secondBlockItem,
+.thirdLevelBlock,
+.subTitle {
+	margin: 0;
+}
+
 .title, .subTitle {
-	margin-bottom: 10px;
+	margin-bottom: 0.54em;
 	cursor: pointer;
 }
 
 .title {
+	font-size: 1.1em;
 	font-weight: 700;
+	margin-top: 1.2em;
 }
 
 .subTitle {
-	margin: 20px 0;
-}
-
-.subTitle a {
-	font-size: 20px;
+	font-size: 0.8em;
 	font-weight: 500;
 }
 
 .itemMenu {
-	font-size: 18px;
+	font-size: 0.65em;
 	font-weight: 300;
-	margin: 10px 0;
+	margin: 0;
 }
 
 .active a{

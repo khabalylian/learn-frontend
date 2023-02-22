@@ -1,0 +1,23 @@
+.wrapper {
+	padding: 30px 0;
+}
+
+.testing {
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+}
+
+.showResult {
+	width: 150px;
+	height: 25px;
+	background-color: rgb(71, 150, 71);
+	border-radius: 2px;
+	outline: none;
+	border: none;
+	cursor: pointer;
+}
+
+.showResult:hover {
+	background-color: rgb(111, 192, 111);
+}

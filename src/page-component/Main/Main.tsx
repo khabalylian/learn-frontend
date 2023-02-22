@@ -2,7 +2,8 @@ import { Suspense, lazy} from 'react';
 import { useParams } from 'react-router-dom';
 import { motion, AnimatePresence} from 'framer-motion';
 
-export const Main = () => {
+
+export const Main = (): JSX.Element => {
     const { typeId } = useParams();
 
 	const MyLazyComp = lazy(() =>
@@ -26,4 +27,3 @@ export const Main = () => {
     );
 };
 
-export default Main;
