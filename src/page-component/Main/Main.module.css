@@ -1,0 +1,56 @@
+.documentation code, .documentation h1, .documentation h2, .documentation p, .documentation ul, .documentation div{
+	margin-bottom: 0.8em;
+}
+
+.documentation code {
+	font-size: 0.9em;
+	color: #d3c4b0;
+	background-color: #1b263b;
+	letter-spacing: 1px;
+	border-radius: 5px;
+	padding: 2px 4px;
+}
+
+.documentation ul, ol {
+	font-weight: 300;
+	line-height: 20px;
+	margin: 1em 0 1em 1em;
+}
+
+.documentation ul {
+	list-style: disc;
+}
+
+.documentation ol {
+	list-style: list;
+}
+
+.documentation p, li {
+	font-size: 18px;
+	margin: 12px 0;
+	color: #bbd1ea;
+}
+
+.documentation h1, .documentation h2,.documentation h4,.documentation h5,.documentation h6 {
+	margin: 20px 0 20px 0;
+}
+
+.documentation h1 {
+	font-weight: 700;
+	font-size: 1.07em;
+}
+
+.documentation h2 {
+	font-weight: 500;
+	font-size: 0.9em;
+	margin-top: 1.78em;
+}
+
+.documentation h3 {
+	font-size: 18px;
+	color: #bbd1ea;
+}
+
+.documentation h4 {
+	font-size: 0.7em;
+}

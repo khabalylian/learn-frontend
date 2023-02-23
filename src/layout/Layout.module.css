@@ -16,62 +16,7 @@
 
 .main {
 	grid-area: main;
-	padding: 0 calc(var(--index) * 5);
-}
-
-.main code, .main h1, .main h2, .main p, .main ul, .main div{
-	margin-bottom: 0.8em;
-}
-
-.main code {
-	font-size: 0.9em;
-	color: #d3c4b0;
-	background-color: #1b263b;
-	letter-spacing: 1px;
-	border-radius: 5px;
-	padding: 2px 4px;
-}
-
-.main ul, ol {
-	font-weight: 300;
-	line-height: 20px;
-	margin: 1em 0 1em 1em;
-}
-
-.main ul {
-	list-style: disc;
-}
-
-.main ol {
-	list-style: list;
-}
-
-.main p, li {
-	font-size: 18px;
-	margin: 12px 0;
-}
-
-.main h1,h2,h4,h5,h6 {
-	margin: 20px 0 20px 0;
-}
-
-.main h1 {
-	font-weight: 700;
-	font-size: 1.07em;
-}
-
-.main h2 {
-	font-weight: 500;
-	font-size: 0.9em;
-	margin-top: 1.78em;
-}
-
-.main h3 {
-	font-size: 18px;
-}
-
-.main h4 {
-	font-size: 0.7em;
+	padding: 30px calc(var(--index) * 5);
 }
 
 p {

@@ -1,4 +1,4 @@
-import { Data } from '../../page-component/Test';
+import { Data } from '../../page-component/TestPage/Test';
 import { GenericObject, ResultCard } from '../ResultCard/ResultCard';
 import styles from './ResultTesting.module.css';
 

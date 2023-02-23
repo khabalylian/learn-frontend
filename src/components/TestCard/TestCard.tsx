@@ -1,4 +1,4 @@
-import { Data } from '../../page-component/Test';
+import { Data } from '../../page-component/TestPage/Test';
 import { CodeEdit } from '../CodeEdit/CodeEdit';
 import styles from './TestCard.module.css';
 

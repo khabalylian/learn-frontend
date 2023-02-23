@@ -1,13 +1,13 @@
 import { SyntheticEvent, useContext, useEffect, useState } from 'react';
 import styles from './Test.module.css';
 
-import { TestCard } from '../components/TestCard/TestCard';
+import { TestCard } from '../../components/TestCard/TestCard';
 import { collection, getDocs } from 'firebase/firestore';
-import { db } from '../auth/firebase.config';
-import { AppContext, IAppContext } from '../context/app.context';
+import { db } from '../../auth/firebase.config';
+import { AppContext, IAppContext } from '../../context/app.context';
 import { useParams } from 'react-router-dom';
-import { GenericObject } from '../components/ResultCard/ResultCard';
-import { ResultTesting } from '../components/ResultTesting/ResultTesting';
+import { GenericObject } from '../../components/ResultCard/ResultCard';
+import { ResultTesting } from '../../components/ResultTesting/ResultTesting';
 
 export interface Data {
     id: number;
