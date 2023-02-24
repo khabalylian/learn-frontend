@@ -27,6 +27,7 @@ p {
 a {
 	text-decoration: none;
 	color: #3a6ea5;
+	transition: all 0.2s;
 }
 
 a:hover {

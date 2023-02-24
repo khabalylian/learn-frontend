@@ -3,3 +3,14 @@
 	flex-direction: column;
 	gap: 20px;
 }
+
+.literatureList{
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	margin: 0 0 0 10px;
+}
+
+.literatureList li{
+	list-style-type: auto;
+}

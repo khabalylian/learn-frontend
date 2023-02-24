@@ -35,6 +35,9 @@ export const Header = ({className}: {className: string}) => {
 
 	return (
         <header className={cn(className, styles.header)}>
+			<Link to='literature'>
+				<h3 className={styles.literature}>Література</h3>
+			</Link>
             <Box className={styles.box}>
                 <FormControl variant='standard' sx={{ m: 1, minWidth: 120 }}>
                     <InputLabel

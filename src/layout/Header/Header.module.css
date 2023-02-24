@@ -2,8 +2,12 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	gap: 50px;
 	background-color: #1a2742;
 	height: 70px;
 }
 
+.literature {
+	font-size: 0.7em;
+}
 
