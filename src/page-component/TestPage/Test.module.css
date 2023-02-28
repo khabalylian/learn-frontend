@@ -1,23 +1,12 @@
-.wrapper {
-	padding: 30px 0;
+.title {
+	font-size: 0.9em;
+	margin-top: 50px;
 }
 
-.testing {
-	display: flex;
-	flex-direction: column;
-	gap: 50px;
+.infoText {
+	font-size: 0.7em;
 }
 
-.showResult {
-	width: 150px;
-	height: 25px;
-	background-color: rgb(71, 150, 71);
-	border-radius: 2px;
-	outline: none;
-	border: none;
-	cursor: pointer;
-}
-
-.showResult:hover {
-	background-color: rgb(111, 192, 111);
+.infoList {
+	list-style-type: number;
 }

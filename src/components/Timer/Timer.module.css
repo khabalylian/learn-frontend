@@ -1,0 +1,6 @@
+.timer {
+	display: inline-block;
+	background-color: #1a2742;
+	border-radius: 5px;
+	padding: 10px 5px;
+}

@@ -1,4 +1,7 @@
 .resultTesting {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
 	font-size: 21px;
 }
 

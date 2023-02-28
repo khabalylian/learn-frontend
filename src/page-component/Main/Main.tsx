@@ -10,7 +10,7 @@ export const Main = (): JSX.Element => {
 	const MyLazyComp = lazy(() =>
 		import(`../../Documentation/${typeId}/${typeId}.mdx`)
 	);
-
+	
     return (
         <Suspense>
             <AnimatePresence mode='wait'>
@@ -21,7 +21,7 @@ export const Main = (): JSX.Element => {
 					transition={{duration: 0.5}}
 					style={{position: 'relative', padding: '50px 0'}}
 					className={styles.documentation}
-                >
+                >	
                     <MyLazyComp />
                 </motion.div>
             </AnimatePresence>
