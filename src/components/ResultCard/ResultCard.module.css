@@ -1,7 +1,7 @@
 .resultCard {
-	background-color: #1b263b;
+	background-color: var(--background-result-card);
 	border-radius: 5px;
-	padding: 10px;
+	padding: 10px 10px 15px 10px;
 	margin-bottom: 20px;
 }
 
@@ -27,17 +27,17 @@
 }
 
 .true {
-	border: 2px solid green;
+	border: 2px solid var(--true-example);
 }
 
 .false {
-	border: 2px solid red;
+	border: 2px solid var(--false-example);
 }
 
 .textFalse {
-	color: red;
+	color: var(--false-example);
 }
 
 .textTrue {
-color: green;
+color: var(--true-example);
 }

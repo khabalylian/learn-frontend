@@ -4,8 +4,8 @@
 
 .documentation code {
 	font-size: 0.9em;
-	color: #d3c4b0;
-	background-color: #1b263b;
+	color: var(--code-color);
+	background-color: var(--background-result-card);
 	letter-spacing: 1px;
 	border-radius: 5px;
 	padding: 2px 4px;
@@ -27,28 +27,21 @@
 
 .documentation p, li {
 	font-size: 18px;
+	color: var(--menu-active-link);
 	margin: 12px 0;
-	color: #bbd1ea;
 }
 
 .documentation h1, .documentation h2,.documentation h4,.documentation h5,.documentation h6 {
 	margin: 20px 0 20px 0;
 }
 
-.documentation h1 {
-	font-weight: 700;
-	font-size: 1.07em;
-}
-
 .documentation h2 {
-	font-weight: 500;
-	font-size: 0.9em;
 	margin-top: 1.78em;
 }
 
 .documentation h3 {
 	font-size: 18px;
-	color: #bbd1ea;
+	color: var(--menu-active-link);
 }
 
 .documentation h4 {

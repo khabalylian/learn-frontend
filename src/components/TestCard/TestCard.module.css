@@ -1,5 +1,5 @@
 .testCard {
-	background-color: #1b263b;
+	background-color: var(--background-result-card);
 	border-radius: 5px;
 	padding: 10px;
 	margin: 0 !important;
@@ -23,8 +23,11 @@
 	margin: 0 0 0 20px !important;
 }
 
+.list li {
+	font-size: 0.6em;
+}
+
 .title {
-	font-size: 0.7em;
 	margin-top: 0 !important;
 }
 

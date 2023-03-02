@@ -32,19 +32,18 @@
 
 .subTitle {
 	font-size: 0.8em;
-	font-weight: 500;
 }
 
 .itemMenu {
 	font-size: 0.65em;
-	font-weight: 300;
+	font-weight: 400;
 	margin: 0;
 }
 
 .active a{
-	color: #bbd1ea;
+	color: var(--menu-active-link);
 }
 
 .borderActive a{
-	border-bottom: 1px solid #bbd1ea;
+	border-bottom: 1px solid var(--menu-active-link)
 }

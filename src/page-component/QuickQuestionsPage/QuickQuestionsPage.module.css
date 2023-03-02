@@ -1,0 +1,9 @@
+.quickQuestions {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.quickQuestions span {
+	font-size: 0.8em;
+}

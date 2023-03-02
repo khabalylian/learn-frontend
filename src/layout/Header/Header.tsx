@@ -6,6 +6,9 @@ export const Header = ({className}: {className: string}) => {
 	
 	return (
         <header className={cn(className, styles.header)}>
+            <Link to='quickQuestions'>
+                <h3 className={styles.quickQuestions}>Швидкі питання</h3>
+            </Link>
             <Link to='literature'>
                 <h3 className={styles.text}>Література</h3>
             </Link>

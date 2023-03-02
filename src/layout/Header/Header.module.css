@@ -3,11 +3,6 @@
 	align-items: center;
 	justify-content: center;
 	gap: 50px;
-	background-color: #1a2742;
+	background-color: var(--header);
 	height: 70px;
 }
-
-.text {
-	font-size: 0.7em;
-}
-

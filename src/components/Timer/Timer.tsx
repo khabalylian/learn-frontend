@@ -11,7 +11,7 @@ export const Timer = ({
     setShowResult: (select: boolean) => void,
     showResult: boolean
 }) => {
-    const [timer, setTimer] = useState<number>(10);
+    const [timer, setTimer] = useState<number>(420);
     const [minutes, setMinutes] = useState<number>(0);
     const [seconds, setSeconds] = useState<number>(0);
 

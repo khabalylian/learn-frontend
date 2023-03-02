@@ -2,6 +2,7 @@ import { withLayout } from './layout/Layout';
 import { Main } from './page-component/Main/Main';
 import { Test } from './page-component/TestPage/Test';
 import { LiteraturePage } from './page-component/LiteraturePage/LiteraturePage';
+import { QuickQuestionsPage } from './page-component/QuickQuestionsPage/QuickQuestionsPage'
 import { Route, Routes} from 'react-router-dom';
 import { TestingComponent } from './components/index.jsx';
 
@@ -26,6 +27,7 @@ const App = (): JSX.Element => {
                 <Route path=':select' element={<TestingComponent />} />
             </Route>
             <Route path='literature' element={<LiteraturePage />} />
+            <Route path='quickQuestions' element={<QuickQuestionsPage />} />
         </Routes>
     );
 }

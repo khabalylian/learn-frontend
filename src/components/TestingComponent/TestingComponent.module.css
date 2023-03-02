@@ -12,7 +12,7 @@
 .showResult {
 	width: 150px;
 	height: 25px;
-	background-color: rgb(71, 150, 71);
+	background-color: var(--showResult-btn);
 	border-radius: 2px;
 	outline: none;
 	border: none;
@@ -20,7 +20,7 @@
 }
 
 .showResult:hover {
-	background-color: rgb(111, 192, 111);
+	background-color: var(--showResult-btn-hover);
 }
 
 .timer {
