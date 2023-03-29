@@ -1,8 +1,13 @@
 .header{
 	display: flex;
+	gap: 150px;
+	background-color: var(--header);
+	height: 70px;
+}
+
+.menu {
+	display: flex;
 	align-items: center;
 	justify-content: center;
 	gap: 50px;
-	background-color: var(--header);
-	height: 70px;
 }

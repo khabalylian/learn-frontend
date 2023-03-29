@@ -1,22 +1,49 @@
-import { Data } from '../../page-component/TestPage/Test';
-import { CodeEdit } from '../CodeEdit/CodeEdit';
+import Button from '@mui/material/Button';
+import { motion } from 'framer-motion';
+
+import { Data } from '../TestingComponent/TestingComponent';
 import styles from './TestCard.module.css';
 
-export const TestCard = ({title, question, variants, id, correctVariant, changeForm}: Data): JSX.Element => {
+import { Timer, CodeEdit } from '../index';
+interface TestCardProps extends Data {
+    currentQuestion: number;
+    setCurrentQuestion: (currentQuestion: number) => void;
+	setShowResult: (showResult: boolean) => void;
+}
 
-	function parseQuestion (question: string) {
-		return question
+export const TestCard = ({
+    title,
+    question,
+    variants,
+    id,
+    correctVariant,
+    changeForm,
+    currentQuestion,
+    setCurrentQuestion,
+    setShowResult
+}: TestCardProps): JSX.Element => {
+    function parseQuestion(question: string) {
+        return question
             .split('~')
             .map(item => item.trim())
             .join('\n')
             .split('_')
             .map(item => item)
             .join('  ');
-	}
-
+    }
 
     return (
-        <div className={styles.testCard}>
+        <motion.div
+            className={styles.testCard}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.3 }}
+        >
+            <Timer
+                currentQuestion={currentQuestion}
+                setCurrentQuestion={setCurrentQuestion}
+                setShowResult={setShowResult}
+            />
             <h3 className={styles.title}>{title}</h3>
             <div className={styles.example}>
                 <CodeEdit text={parseQuestion(question)} />
@@ -40,6 +67,25 @@ export const TestCard = ({title, question, variants, id, correctVariant, changeF
                     </ol>
                 </div>
             </form>
-        </div>
+            <div className={styles.btn}>
+                {currentQuestion === 14 ? (
+                    <Button
+                        variant='outlined'
+                        sx={{ width: '100px' }}
+                        onClick={() => setShowResult(true)}
+                    >
+                        Завершити
+                    </Button>
+                ) : (
+                    <Button
+                        variant='outlined'
+                        sx={{ width: '100px' }}
+                        onClick={() => setCurrentQuestion(++currentQuestion)}
+                    >
+                        Далі
+                    </Button>
+                )}
+            </div>
+        </motion.div>
     );
 };

@@ -1,7 +1,7 @@
 import { createContext, PropsWithChildren, useState } from 'react';
 
 export interface IAppContext {
-	selectTest: string,
+	selectTest?: string,
 	setSelectTest?: (selectTest: string) => void;
 }
 

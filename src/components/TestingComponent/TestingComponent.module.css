@@ -6,25 +6,5 @@
 .testing {
 	display: flex;
 	flex-direction: column;
-	gap: 50px;
-}
-
-.showResult {
-	width: 150px;
-	height: 25px;
-	background-color: var(--showResult-btn);
-	border-radius: 2px;
-	outline: none;
-	border: none;
-	cursor: pointer;
-}
-
-.showResult:hover {
-	background-color: var(--showResult-btn-hover);
-}
-
-.timer {
-	position: fixed;
-	top: 20px;
-	right: 20px;
+	gap: 20px;
 }

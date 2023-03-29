@@ -2,16 +2,18 @@ import { useEffect, useState } from 'react';
 
 import styles from './Timer.module.css';
 
-
+export interface TimerProps {
+	setShowResult: (showResult: boolean) => void;
+    setCurrentQuestion: (currentQuestion: number) => void;
+    currentQuestion: number;
+}
 
 export const Timer = ({
+    setCurrentQuestion,
+    currentQuestion,
     setShowResult,
-    showResult
-}: {
-    setShowResult: (select: boolean) => void,
-    showResult: boolean
-}) => {
-    const [timer, setTimer] = useState<number>(420);
+}: TimerProps) => {
+    const [timer, setTimer] = useState<number>(90);
     const [minutes, setMinutes] = useState<number>(0);
     const [seconds, setSeconds] = useState<number>(0);
 
@@ -20,14 +22,23 @@ export const Timer = ({
             transformTime(timer);
             setTimer(timer => timer - 1);
         }, 1000);
+		
+		if(currentQuestion === 14 && timer < 0) {
+			setShowResult(true);
+		}
 
-        if (timer < 0 || showResult) {
+        if (timer < 0) {
             clearInterval(interval);
-            setShowResult(true);
+            setCurrentQuestion(++currentQuestion);
         }
+
 
         return () => clearInterval(interval);
     }, [timer]);
+
+	useEffect(() => {
+		transformTime(timer);
+	}, [])
 
     function transformTime(time: number) {
         setMinutes(Math.floor((time / 60) % 60));

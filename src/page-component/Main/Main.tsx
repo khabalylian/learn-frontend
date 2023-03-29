@@ -5,10 +5,10 @@ import styles from './Main.module.css';
 
 
 export const Main = (): JSX.Element => {
-    const { typeId } = useParams();
+    const { typeId, id } = useParams();
 
 	const MyLazyComp = lazy(() =>
-		import(`../../Documentation/${typeId}/${typeId}.mdx`)
+		import(`../../Documentation/${id}/${typeId}/${typeId}.mdx`)
 	);
 	
     return (

@@ -20,7 +20,7 @@ const Layout = ({children}: PropsWithChildren): JSX.Element => {
 export const withLayout =<T extends Record<string, unknown> & IAppContext> (Component: FunctionComponent<T>) => {
 	return function withLayoutComponent(props: T): JSX.Element {
 		return (
-			<AppContextProvider selectTest={''}>
+			<AppContextProvider>
 				<Layout>
 					<Component {...props}/>
 				</Layout>

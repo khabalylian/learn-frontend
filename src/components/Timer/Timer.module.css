@@ -1,6 +1,9 @@
 .timer {
+	position: absolute;
+	top: 0;
+	right: 0;
 	display: inline-block;
-	background-color: var(--header);
+	background-color: inherit;
 	border-radius: 5px;
-	padding: 10px 5px;
+	padding: 10px 10px;
 }
