@@ -1,6 +1,6 @@
 import {  useMemo, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import cn from 'classnames';
 import styles from './Menu.module.css';
 
@@ -26,23 +26,28 @@ export const Menu = () => {
         .pathname.split('/')
         .filter(item => item)
 		
-	const variants ={
-		visible: {
+	const variants = {
+        visible: {
+            transition: {
+                when: 'beforeChildren',
+                staggerChildren: 0.05
+            }
+        },
+        hidden: {
+            margin: 0,
 			transition: {
-				when: 'beforeChildren',
-				staggerChildren: 0.05
-			},
-		},
-		hidden:{
-			margin: 0
-		}
-	}
+                when: 'beforeChildren',
+                staggerChildren: 0.05,
+				staggerDirection: -1
+            }
+        }
+    };
 
 	const variantsChildren ={
 		visible: {
 			height: 'auto',
-			marginBottom: 10,
 			opacity: 1,
+			marginBottom: 10
 		},
 		hidden:{
 			height: 0,
@@ -52,7 +57,7 @@ export const Menu = () => {
 	}
   
 
-    const objMenu: FirstLevel[]  = [
+    const objMenu: FirstLevel[] = [
         {
             name: 'JS',
             secondLevel: [
@@ -95,84 +100,84 @@ export const Menu = () => {
                             name: 'Перетворення типів',
                             path: 'TransformationTypes'
                         },
-						{
+                        {
                             name: 'Умовні розгалуження: if, ?',
                             path: 'ConditionalBranching'
                         },
-						{
+                        {
                             name: 'Цикли',
                             path: 'Cycles'
                         },
-						{
+                        {
                             name: 'Switch',
                             path: 'Switch'
-                        },
+                        }
                     ]
                 },
-				{
-					name: 'Оператори JavaScript',
-					path: 'OperatorsJS',
-					thirdLevel: [
-						{
-							name: 'Базові оператори',
-							path: 'BasicOperators'
-						},
-						{
-							name: 'Оператори порівняння',
-							path: 'ComparisonOperators'
-						},
-						{
-							name: 'Логічні оператори',
-							path: 'LogicalOperators'
-						},
-					]
+                {
+                    name: 'Оператори JavaScript',
+                    path: 'OperatorsJS',
+                    thirdLevel: [
+                        {
+                            name: 'Базові оператори',
+                            path: 'BasicOperators'
+                        },
+                        {
+                            name: 'Оператори порівняння',
+                            path: 'ComparisonOperators'
+                        },
+                        {
+                            name: 'Логічні оператори',
+                            path: 'LogicalOperators'
+                        }
+                    ]
                 },
-				{
-					name: 'Функції',
-					path: 'Function',
-					thirdLevel: [
-						{
-							name: 'Функції',
-							path: 'BasicFunction'
-						},
-						{
-							name: 'Рекурсія і Замикання',
-							path: 'RecursionAndClosure'
-						},
-					]
+                {
+                    name: 'Функції',
+                    path: 'Function',
+                    thirdLevel: [
+                        {
+                            name: 'Функції',
+                            path: 'BasicFunction'
+                        },
+                        {
+                            name: 'Рекурсія і Замикання',
+                            path: 'RecursionAndClosure'
+                        }
+                    ]
                 },
-				{
-					name: 'Об`єкти основи',
-					path: 'BasicObjects',
-					thirdLevel: [
-						{
-							name: 'Об`єкти',
-							path: 'Objects'
-						},
-						{
-							name: 'Копіювання об’єктів та посилання',
-							path: 'CopyObject'
-						},
-						{
-							name: 'Методи об’єкту, "this"',
-							path: 'ObjectThis'
-						},
-						{
-							name: 'Конструктори, оператор "new"',
-							path: 'Constructors'
-						},
-						{
-							name: 'Методи',
-							path: 'ObjectMethod'
-						},
-						{
-							name: 'Деструктуризація',
-							path: 'Destructured'
-						},
-					]
-                },
+                {
+                    name: 'Об`єкти основи',
+                    path: 'BasicObjects',
+                    thirdLevel: [
+                        {
+                            name: 'Об`єкти',
+                            path: 'Objects'
+                        },
+                        {
+                            name: 'Копіювання об’єктів та посилання',
+                            path: 'CopyObject'
+                        },
+                        {
+                            name: 'Методи об’єкту, "this"',
+                            path: 'ObjectThis'
+                        },
+                        {
+                            name: 'Конструктори, оператор "new"',
+                            path: 'Constructors'
+                        },
+                        {
+                            name: 'Методи',
+                            path: 'ObjectMethod'
+                        },
+                        {
+                            name: 'Деструктуризація',
+                            path: 'Destructured'
+                        }
+                    ]
+                }
             ]
-        }
+        },
     ];
 
     function firstLevel(arr: FirstLevel[]) {

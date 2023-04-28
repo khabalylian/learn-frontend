@@ -2,3 +2,20 @@
 	outline: 0;
 	white-space: pre-line;
 }
+
+.codeBlock {
+	font-size: 17px !important;
+	background: #1b263b;
+}
+
+.codeBlock button{
+	cursor: pointer;
+}
+
+.standart button {
+	display: none;
+}
+
+.standart {
+	background: inherit;
+}

@@ -8,6 +8,7 @@ import { Route, Routes } from 'react-router-dom';
 import { TestingComponent } from './components/index.jsx';
 
 const App = (): JSX.Element => {
+
     return (
         <div className='app'>
             <Routes>

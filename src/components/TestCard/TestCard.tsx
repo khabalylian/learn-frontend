@@ -46,7 +46,7 @@ export const TestCard = ({
             />
             <h3 className={styles.title}>{title}</h3>
             <div className={styles.example}>
-                <CodeEdit text={parseQuestion(question)} />
+                <CodeEdit text={parseQuestion(question)} variant='standart'/>
             </div>
             <form onChange={e => changeForm?.(e, id)}>
                 <div className={styles.wrapper}>
