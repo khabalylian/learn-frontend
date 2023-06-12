@@ -11,3 +11,7 @@
 	justify-content: center;
 	gap: 50px;
 }
+
+.menuItemActive a {
+	color: var(--menu-active-link);
+}

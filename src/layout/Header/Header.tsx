@@ -1,5 +1,5 @@
 import styles from './Header.module.css';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import cn from 'classnames';
 import { useEffect, useState } from 'react';
 
@@ -7,6 +7,10 @@ import { InView } from 'react-intersection-observer';
 
 export const Header = ({ className }: { className: string }) => {
     const [position, setPosition] = useState({ x: 0, y: 0 });
+
+	const pathname = useLocation()
+        .pathname.split('/')
+        .filter(item => item);
 
     const handleMouseMove = (event: MouseEvent) => {
         setPosition({
@@ -66,16 +70,33 @@ export const Header = ({ className }: { className: string }) => {
             </InView>
 
             <ul className={styles.menu}>
-                <li className={styles.menuItem}>
+                <li
+                    className={cn(styles.menuItem, {
+                        [styles.menuItemActive]: pathname[0] === 'handbook'
+                    })}
+                >
                     <Link to='handbook'>Довідник</Link>
                 </li>
-                <li className={styles.menuItem}>
+                <li
+                    className={cn(styles.menuItem, {
+                        [styles.menuItemActive]:
+                            pathname[0] === 'quickQuestions'
+                    })}
+                >
                     <Link to='quickQuestions'>Швидкі питання</Link>
                 </li>
-                <li className={styles.menuItem}>
+                <li
+                    className={cn(styles.menuItem, {
+                        [styles.menuItemActive]: pathname[0] === 'literature'
+                    })}
+                >
                     <Link to='literature'>Література</Link>
                 </li>
-                <li className={styles.menuItem}>
+                <li
+                    className={cn(styles.menuItem, {
+                        [styles.menuItemActive]: pathname[0] === 'test'
+                    })}
+                >
                     <Link to='test'>Тести</Link>
                 </li>
             </ul>

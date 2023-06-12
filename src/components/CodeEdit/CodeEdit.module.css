@@ -5,7 +5,11 @@
 
 .codeBlock {
 	font-size: 17px !important;
-	background: #1b263b;
+	background: #1b263b !important;
+}
+
+.codeBlock span, .codeBlock div {
+	background: #1b263b !important;
 }
 
 .codeBlock button{

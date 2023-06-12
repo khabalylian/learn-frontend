@@ -2,10 +2,6 @@
 	margin-bottom: 0.8em;
 }
 
-.documentation div, .documentation span{
-	background: #1b263b !important
-}
-
 .documentation code {
 	font-size: 0.9em;
 	color: var(--code-color);
