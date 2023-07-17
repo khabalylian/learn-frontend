@@ -12,8 +12,8 @@ import Paper from '@mui/material/Paper';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
-import styles from './Handbook.module.css';
 import { useState } from 'react';
+import { MotionWrapper } from '../../helpers/helpers';
 
 interface Data {
     syntax: string;
@@ -387,38 +387,40 @@ const tag = [
 
 export const Handbook = () => {
     return (
-        <TableContainer component={Paper} sx={{ backgroundColor: '#27476e' }}>
-            <Table aria-label='collapsible table'>
-                <TableHead>
-                    <TableRow>
-                        <TableCell sx={{ borderBottom: '1px solid #aad' }} />
-                        <TableCell
-                            sx={{
-                                padding: '16px 16px 16px 0',
-                                color: '#bbd1ea',
-                                borderBottom: '1px solid #aad'
-                            }}
-                        >
-                            Теґ
-                        </TableCell>
-                        <TableCell
-                            align='left'
-                            sx={{
-                                padding: '16px 16px 16px 0',
-                                color: '#bbd1ea',
-                                borderBottom: '1px solid #aad'
-                            }}
-                        >
-                            Короткий опис
-                        </TableCell>
-                    </TableRow>
-                </TableHead>
-                <TableBody>
-                    {tag.map(row => (
-                        <Row key={row.tag} row={row} />
-                    ))}
-                </TableBody>
-            </Table>
-        </TableContainer>
+		<MotionWrapper>
+			<TableContainer component={Paper} sx={{ backgroundColor: '#27476e' }}>
+				<Table aria-label='collapsible table'>
+					<TableHead>
+						<TableRow>
+							<TableCell sx={{ borderBottom: '1px solid #aad' }} />
+							<TableCell
+								sx={{
+									padding: '16px 16px 16px 0',
+									color: '#bbd1ea',
+									borderBottom: '1px solid #aad'
+								}}
+							>
+								Теґ
+							</TableCell>
+							<TableCell
+								align='left'
+								sx={{
+									padding: '16px 16px 16px 0',
+									color: '#bbd1ea',
+									borderBottom: '1px solid #aad'
+								}}
+							>
+								Короткий опис
+							</TableCell>
+						</TableRow>
+					</TableHead>
+					<TableBody>
+						{tag.map(row => (
+							<Row key={row.tag} row={row} />
+						))}
+					</TableBody>
+				</Table>
+			</TableContainer>
+		</MotionWrapper>
     );
 };

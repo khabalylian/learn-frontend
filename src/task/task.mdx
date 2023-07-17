@@ -1,0 +1,35 @@
+import { CodeEdit, InfoPage } from '../components/index.jsx';
+import {CreateExpCard} from '../components/CreateExpCard/CreateExpCard.tsx' 
+import styles from '../page-component/ExercisesPage/ExercisesPage.module.css';
+
+## Вставте пропущене слово для:
+
+<CreateExpCard title='Получення ключів обєкта' id={1}>
+const myObject = \{
+	&emsp;name: 'John',
+	&emsp;age: 25,
+	&emsp;country: 'USA'
+};
+const keys = Object. <input data-exp="input" className={styles.expInput}/>(myObject);
+</CreateExpCard>
+
+<CreateExpCard title='Додавання класу елементу' id={2}>
+	const myElement = document.querySelector('.my-element');
+	myElement. <input data-exp="input" className={styles.expInput}/>('active');
+</CreateExpCard>
+
+<CreateExpCard title='Получення суми елементів масиву' id={3}>
+	const myArray = [1, 2, 3, 4, 5];
+	const sum = myArray. <input data-exp="input" className={styles.expInput}/>((total, current) => total + current);
+</CreateExpCard>
+
+<CreateExpCard title='Получення масив елементів в верхньому регістрі' id={4}>
+	const colors = ['red', 'blue', 'green'];
+	const capitalizedColors = colors.map(color => color. <input data-exp="input" className={styles.expInput}/> )
+</CreateExpCard>
+
+<CreateExpCard title='Обєднання рядків' id={5}>
+	const str1 = "Hello";
+	const str2 = "World!";
+	const result = str1. <input data-exp="input" name='5' className={styles.expInput}/> (str2);
+</CreateExpCard>

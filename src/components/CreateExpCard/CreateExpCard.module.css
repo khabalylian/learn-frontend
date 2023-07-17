@@ -1,0 +1,6 @@
+.wrapper {
+	background-color: var(--background-result-card);
+	white-space: pre;
+	border-radius: 5px;
+	padding: 10px;
+}

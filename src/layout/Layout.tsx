@@ -1,18 +1,23 @@
 import styles from './Layout.module.css';
+
 import { Header } from './Header/Header';
 import { Sidebar } from './Sidebar/Sidebar';
 import React, { FunctionComponent, PropsWithChildren} from 'react';
 import { AppContextProvider } from '../context/app.context';
 import { IAppContext } from '../context/app.context';
 
+import { AnimatePresence } from 'framer-motion';
+
 const Layout = ({children}: PropsWithChildren): JSX.Element => {
 	return (
         <div className={styles.wrapper}>
-            <Header className={styles.header}/>
+            <Header className={styles.header} />
             <Sidebar className={styles.sidebar} />
-            <div className={styles.main}>
-				{children}
-			</div>
+                <div className={styles.main}>
+					<AnimatePresence mode='wait'>
+						{children}
+					</AnimatePresence>
+                </div>
         </div>
     );
 };
@@ -20,11 +25,11 @@ const Layout = ({children}: PropsWithChildren): JSX.Element => {
 export const withLayout =<T extends Record<string, unknown> & IAppContext> (Component: FunctionComponent<T>) => {
 	return function withLayoutComponent(props: T): JSX.Element {
 		return (
-			<AppContextProvider>
+            <AppContextProvider>
 				<Layout>
-					<Component {...props}/>
+					<Component {...props} />
 				</Layout>
-			</AppContextProvider>
-		);
+            </AppContextProvider>
+        );
 	};
 };

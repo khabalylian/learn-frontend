@@ -1,12 +1,11 @@
 import { SyntheticEvent, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-import { collection, getDocs } from 'firebase/firestore';
-import { db } from '../../auth/firebase.config';
-
 import styles from './TestingComponent.module.css';
 
 import CircularProgress from '@mui/material/CircularProgress';
+
+import { getData } from '../../helpers/helpers';
 
 import { TestCard, ResultTesting } from '../index';
 
@@ -20,6 +19,7 @@ export interface Data {
     variants: string[];
     question: string;
     correctQuestion?: GenericObject;
+    dfgdfgfd: string;
     changeForm?: (e: SyntheticEvent, id: number) => void;
 }
 
@@ -33,10 +33,15 @@ export const TestingComponent = () => {
     const { select } = useParams();
 
     useEffect(() => {
-        if (select) {
-            getData(select);
-        }
-    }, []);
+		if (select) {
+			getData<Data>(select)
+			.then(data => {
+				setData(mixData(data));
+				setLoading(false);
+			})
+		}
+	}, []);
+
 
     function changeForm(e: SyntheticEvent, id: number) {
         setCorrectQuestion({
@@ -49,18 +54,6 @@ export const TestingComponent = () => {
         return data.sort(() => Math.random() - 0.5).splice(0, 15);
     }
 
-    async function getData(selectTest: string) {
-        const completeData: Array<Data> = [];
-
-        const querySnapshot = await getDocs(collection(db, selectTest));
-
-        querySnapshot.forEach(data => {
-            const result = data.data() as Data;
-            completeData.push(result);
-        });
-        setData(mixData(completeData));
-        setLoading(false);
-    }
 
     function renderTest() {
         return data.map((item: Data, index: number) => {

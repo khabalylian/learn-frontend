@@ -1,0 +1,22 @@
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.exp div {
+	font-size: 18px;
+}
+
+.expBtn {
+	margin-top: 20px !important;
+}
+
+.expInput {
+	width: 150px;
+	font-size: 0.85em;
+	font-weight: 700;
+	border-radius: 5px;
+	border: none;
+	outline: none;
+}
