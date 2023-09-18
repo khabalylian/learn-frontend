@@ -1,8 +1,40 @@
 .sidebar {
-	width: 285px;
+	position: relative;
+	max-width: 285px;
 	height: 100vh;
+	background-color: var(--background-color);
 	position: fixed;
     top: 70px;
 	box-shadow: 3px 5px 10px -1px #000000;
 	transition: all 0.1s ease;
+}
+
+.sidebar.hideBar {
+	transform: translate(-85%, 0);
+}
+
+.hideSidebar {
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: inherit;
+	border: none;
+	outline: none;
+	margin-top: 5px;
+	cursor: pointer;
+}
+
+
+.subtitle {
+	display: none;
+	position: absolute;
+	font-size: 24px;
+	color: var(--text-link);
+	top: 25%;
+	right: -20%;
+	transform: rotate(-90deg);
+}
+
+.hideSubtitle {
+	display: block;
 }

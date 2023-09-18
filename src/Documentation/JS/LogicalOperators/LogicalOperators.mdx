@@ -1,5 +1,4 @@
-import Alert from '@mui/material/Alert';
-import { CodeEdit, InfoPage } from '../../../components/index.jsx';
+import { CodeEdit, InfoPage, Alerts } from '../../../components/index.jsx';
 
 <InfoPage>
 	[https://uk.javascript.info](https://uk.javascript.info/logical-operators)
@@ -99,12 +98,12 @@ if (hour == 12 && minute == 30) {
 }
 `}/>
 
-<Alert severity="info" variant="outlined">
+<Alerts severity="info" variant="outlined">
 	### Пріоритет І && вище за АБО ||
 	Оператор І ```&&``` має вищий пріоритет за АБО ```||```.
 
 	Отже, код ```a && b || c && d``` по суті є таким самим, як код з виразами ```&&``` у дужках: ```(a && b) || (c && d)```.
-</Alert>
+</Alerts>
 
 ## ! (НЕ)
 Булевий оператор НЕ представлений знаком оклику ```!```.

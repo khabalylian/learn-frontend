@@ -1,7 +1,7 @@
 import styles from './Header.module.css';
 import { Link, useLocation } from 'react-router-dom';
 import cn from 'classnames';
-import { useEffect, useState } from 'react';
+import { useEffect, useLayoutEffect, useState } from 'react';
 
 import { InView } from 'react-intersection-observer';
 
@@ -13,11 +13,10 @@ const HeaderPage = [
     { title: 'Вправи', path: 'exp' }
 ];
 
-
 export const Header = ({ className }: { className: string }) => {
     const [position, setPosition] = useState({ x: 0, y: 0 });
 
-	const pathname = useLocation()
+    const pathname = useLocation()
         .pathname.split('/')
         .filter(item => item);
 
@@ -28,6 +27,31 @@ export const Header = ({ className }: { className: string }) => {
         });
     };
 
+
+	useEffect(() => {
+        const menu = document.getElementsByClassName(styles.menu)[0];
+        const burger = document.getElementsByClassName(styles.burger)[0];
+		const menuElements = menu.querySelectorAll('li');
+		
+		Array.from(menuElements).forEach(item => {
+			item.addEventListener('click', animBurger);
+		})
+
+		function animBurger() {
+			menu.classList.toggle(styles.active)
+            burger.classList.toggle(styles.burgerActive);
+		}
+	
+		burger?.addEventListener('click', animBurger);
+
+		return () => {
+			Array.from(menuElements).forEach(item => {
+                item.removeEventListener('click', animBurger);
+            });
+			burger?.removeEventListener('click', animBurger);
+		}
+    }, []);
+
     useEffect(() => {
         document.body.addEventListener('mousemove', handleMouseMove);
 
@@ -36,9 +60,10 @@ export const Header = ({ className }: { className: string }) => {
         };
     }, [position]);
 
+
     return (
         <header className={cn(className, styles.header)}>
-            <Link to='/'>
+            <Link to='/' className={styles.logo}>
                 <InView>
                     {({ inView, ref }) => (
                         <svg
@@ -80,10 +105,10 @@ export const Header = ({ className }: { className: string }) => {
                 </InView>
             </Link>
 
-            <ul className={styles.menu}>
+            <ul id='menu' className={styles.menu}>
                 {HeaderPage.map(item => (
                     <li
-						key={item.path}
+                        key={item.path}
                         className={cn(styles.menuItem, {
                             [styles.menuItemActive]: pathname[0] === item.path
                         })}
@@ -92,6 +117,10 @@ export const Header = ({ className }: { className: string }) => {
                     </li>
                 ))}
             </ul>
+
+            <div id='burger' className={styles.burger}>
+                <span></span>
+            </div>
         </header>
     );
 };

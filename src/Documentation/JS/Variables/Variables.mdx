@@ -1,5 +1,4 @@
-import Alert from '@mui/material/Alert';
-import { CodeEdit, InfoPage } from '../../../components/index.jsx';
+import { CodeEdit, InfoPage, Alerts } from '../../../components/index.jsx';
 
 <InfoPage>
 	[https://uk.javascript.info](https://uk.javascript.info)
@@ -78,7 +77,7 @@ message = 'Привіт';
 
 Технічно, всі ці способи роблять одне й те ж. Тому це питання особистого смаку та естетики.
 
-<Alert severity="info" variant="outlined">
+<Alerts severity="info" variant="outlined">
 	### ```var``` замість ```let```
 
 	У старих скриптах ви можете знайти інше ключове слово: ```var``` замість ```let```:
@@ -91,7 +90,7 @@ var message = 'Привіт';
 
 	Є деякі відмінності між ```let``` і ```var```, але вони поки що не мають для нас значення. Ми дізнаємося більше про ці відмінності в розділі Застаріле ключове слово "var".
 
-</Alert>
+</Alerts>
 
 ## Аналогія з життя
 Ми легко зрозуміємо концепцію “змінної”, якщо уявимо її у вигляді “коробки” для даних з унікальною назвою на наклейці.
@@ -127,7 +126,7 @@ alert(hello); // Привіт світ!
 alert(message); // Привіт світ!
 `}/>
 
-<Alert severity="warning" variant="outlined" style={{marginTop: '15px'}}>
+<Alerts severity="warning" variant="outlined" style={{marginTop: '15px'}}>
 	### Оголошення змінної вдруге призведе до помилки
 	Оголошувати змінну можна лише один раз.
 
@@ -138,7 +137,7 @@ alert(message); // Привіт світ!
 	// повторне 'let' призведе до синтаксичної помилки
 	let message = "Той"; // SyntaxError: 'message' has already been declared
 	Тому ми маємо оголосити змінну лише раз, а потім просто посилатися на неї, без let.
-</Alert>
+</Alerts>
 
 ## Іменування змінних
 В JavaScript є два обмеження, які стосуються імен змінних:
@@ -166,12 +165,12 @@ let 1a; // не може починатися з цифри
 let my-name; // дефіс '-' недопустимий в імені
 `}/>
 
-<Alert severity="info" variant="outlined">
+<Alerts severity="info" variant="outlined">
 	### Регістр має значення
 	Змінні з іменами ```apple``` і ```AppLE``` – це дві різні змінні.
-</Alert>
+</Alerts>
 
-<Alert severity="info" variant="outlined">
+<Alerts severity="info" variant="outlined">
 	### Не-латинські букви дозволені, але не рекомендуються
 	Можна використовувати будь-яку мову, включно з кирилицею або навіть ієрогліфами, наприклад:
 
@@ -181,9 +180,9 @@ let 我 = '...';
 `}/>
 
 	Технічно тут немає помилки. Такі імена дозволені, проте є міжнародна традиція використовувати англійську мову в іменах змінних (наприклад, ```yaLyublyuUkrainu``` => ```iLoveUkraine```). Навіть якщо ми пишемо маленький скрипт, у нього може бути тривале життя попереду. Людям з інших країн, можливо, доведеться прочитати його не один раз.
-</Alert>
+</Alerts>
 
-<Alert severity="warning" variant="outlined">
+<Alerts severity="warning" variant="outlined">
 	### Зарезервовані слова
 	Є список зарезервованих слів, які не можна використовувати як імена змінних, тому що ці слова використовує сама мова.
 
@@ -195,7 +194,7 @@ let 我 = '...';
 let let = 5; // не можна назвати змінну "let", помилка!
 let return = 5; // також не можна називати змінну "return", помилка!
 `}/>
-</Alert>
+</Alerts>
 
 ## Константи
 Щоб оголосити константу (незмінювану) змінну, використовуйте ключове слово const замість let:

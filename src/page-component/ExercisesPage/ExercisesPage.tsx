@@ -92,7 +92,7 @@ export const ExercisesPage: FC = () => {
                         variant='outlined'
                         className={styles.expBtn}
                     >
-                        Провірити результат
+                        Перевірити результат
                     </Button>
                 </>
             ) : (

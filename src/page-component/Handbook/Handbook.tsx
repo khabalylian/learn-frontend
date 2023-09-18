@@ -15,6 +15,8 @@ import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import { useState } from 'react';
 import { MotionWrapper } from '../../helpers/helpers';
 
+import styles from './Handbook.module.css';
+
 interface Data {
     syntax: string;
     descr: string;
@@ -97,57 +99,73 @@ function Row(props: { row: ReturnType<typeof createData> }) {
                             >
                                 Опис
                             </Typography>
-                            <Table size='small' aria-label='purchases'>
-                                <TableHead>
-                                    <TableRow>
-                                        <TableCell
-                                            sx={{
-                                                fontWeight: 700,
-                                                color: '#bbd1ea',
-                                                borderBottom: '1px solid #aad'
-                                            }}
-                                        >
-                                            Синтаксис
-                                        </TableCell>
-                                        <TableCell
-                                            sx={{
-                                                fontWeight: 700,
-                                                color: '#bbd1ea',
-                                                borderBottom: '1px solid #aad'
-                                            }}
-                                        >
-                                            Опис тегу
-                                        </TableCell>
-                                    </TableRow>
-                                </TableHead>
-                                <TableBody>
-                                    {row.data.map((historyRow: Data) => (
-                                        <TableRow key={historyRow.syntax}>
-                                            <TableCell
-                                                component='th'
-                                                scope='row'
-                                                sx={{
-                                                    width: '250px',
-                                                    color: '#bbd1ea',
-                                                    borderBottom: 'none'
-                                                }}
-                                            >
-                                                {historyRow.syntax}
-                                            </TableCell>
-                                            <TableCell
-                                                component='th'
-                                                scope='row'
-                                                sx={{
-                                                    color: '#bbd1ea',
-                                                    borderBottom: 'none'
-                                                }}
-                                            >
-                                                {historyRow.descr}
-                                            </TableCell>
-                                        </TableRow>
-                                    ))}
-                                </TableBody>
-                            </Table>
+                            {row.data.map((historyRow: Data) => (
+                                <Table
+                                    size='small'
+                                    aria-label='purchases'
+                                    key={historyRow.syntax}
+                                >
+									<TableHead>
+										<TableRow>
+											<TableCell
+												sx={{
+													fontWeight: 700,
+													color: '#bbd1ea',
+													borderBottom:
+														'1px solid #aad'
+												}}
+											>
+												Синтаксис
+											</TableCell>
+										</TableRow>
+									</TableHead>
+									<TableBody>
+										<TableRow>
+											<TableCell
+												component='th'
+												scope='row'
+												className={styles.syntax}
+												sx={{
+													maxWidth: '160px',
+													color: '#bbd1ea',
+													borderBottom: 'none',
+													whiteSpace: 'pre-line'
+												}}
+											>
+												{historyRow.syntax}
+											</TableCell>
+										</TableRow>
+									</TableBody>
+									<TableHead>
+										<TableRow>
+											<TableCell
+												sx={{
+													fontWeight: 700,
+													color: '#bbd1ea',
+													borderBottom:
+														'1px solid #aad'
+												}}
+											>
+												Опис тегу
+											</TableCell>
+										</TableRow>
+									</TableHead>
+									<TableBody>
+										<TableRow>
+											<TableCell
+												component='th'
+												scope='row'
+												sx={{
+													color: '#bbd1ea',
+													borderBottom: 'none'
+												}}
+											>
+												{historyRow.descr}
+											</TableCell>
+										</TableRow>
+									</TableBody>
+                                </Table>
+                            ))}
                         </Box>
                     </Collapse>
                 </TableCell>
@@ -207,7 +225,7 @@ const tag = [
     ]),
     createData('<blockquote>', 'Довга цитата.', [
         {
-            syntax: '<blockquote>Текст</blockquote>',
+            syntax: '<blockquote> Текст </blockquote>',
             descr: 'Текст, позначений тегом <blockquote>, відображається як блок з відступами зліва та справа (по 40 пікселів) та з відступами зверху та знизу.'
         }
     ]),
@@ -270,7 +288,7 @@ const tag = [
     ]),
     createData('<!DOCTYPE>', 'Задає версію HTML.', [
         {
-            syntax: '<!DOCTYPE [Елемент верхнього рівня] [Публічність] "[Реєстрація]//[Организація]//[Тип] [Ім’я]//[Мова]" "[URL]">',
+            syntax: '<!DOCTYPE [Елемент верхнього рівня] [Публічність] "[Реєстрація] //[Организація]// [Тип] [Ім’я]//[Мова]" "[URL]">',
             descr: '<!DOCTYPE> призначений для задання типу поточного документа - DTD (document type definition, опис типу документа). <!DOCTYPE> повинен бути першим елементом в вашому html-документі, він повинен йти перед тегом <html>.'
         }
     ]),
@@ -416,7 +434,7 @@ export const Handbook = () => {
 					</TableHead>
 					<TableBody>
 						{tag.map(row => (
-							<Row key={row.tag} row={row} />
+							<Row key={row.tag} row={row}/>
 						))}
 					</TableBody>
 				</Table>

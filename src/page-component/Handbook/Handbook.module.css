@@ -1,0 +1,15 @@
+.syntax {
+	max-width: 300px;
+}
+
+@media screen and (max-width: 768px) {
+	.syntax {
+		max-width: 160px;
+	}
+}
+
+@media screen and (max-width: 420px) {
+	.syntax {
+		max-width: 100px;
+	}
+}

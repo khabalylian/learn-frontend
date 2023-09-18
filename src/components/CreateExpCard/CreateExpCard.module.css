@@ -1,6 +1,11 @@
 .wrapper {
 	background-color: var(--background-result-card);
-	white-space: pre;
+	white-space: pre-line;
 	border-radius: 5px;
 	padding: 10px;
 }
+
+.wrapper p {
+	white-space: pre-line;
+}
+

@@ -70,3 +70,9 @@ li {
 	font-size: 0.7em;
 	letter-spacing: 1px;
 }
+
+@media  screen and (max-width: 768px) {
+	body {
+		font-size: 22px;
+	}
+}

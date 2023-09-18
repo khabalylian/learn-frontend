@@ -12,12 +12,12 @@ const Layout = ({children}: PropsWithChildren): JSX.Element => {
 	return (
         <div className={styles.wrapper}>
             <Header className={styles.header} />
-            <Sidebar className={styles.sidebar} />
                 <div className={styles.main}>
 					<AnimatePresence mode='wait'>
 						{children}
 					</AnimatePresence>
                 </div>
+            <Sidebar className={styles.sidebar} />
         </div>
     );
 };

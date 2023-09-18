@@ -1,5 +1,4 @@
-import Alert from '@mui/material/Alert';
-import { CodeEdit, InfoPage } from '../../../components/index.jsx';
+import { CodeEdit, InfoPage, Alerts } from '../../../components/index.jsx';
 
 <InfoPage>
 	[https://uk.javascript.info](https://uk.javascript.info/operators)
@@ -190,10 +189,10 @@ counter--;        // працює так само, як counter = counter - 1, �
 alert( counter ); // 1
 `}/>
 
-<Alert severity="warning" variant="outlined">
+<Alerts severity="warning" variant="outlined">
 	### Важливо:
 	Інкремент/декремент можуть застосовуватися лише до змінних. Спроба використати їх із значенням, як от ```5++```, призведе до помилки.
-</Alert>
+</Alerts>
 
 Оператори ```++``` та ```--``` можуть розташовуватися до або після змінної.
 

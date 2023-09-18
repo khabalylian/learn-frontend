@@ -1,9 +1,14 @@
+.documentation {
+	position: relative;
+	padding: 50px 20px 0 20px;
+}
+
 .documentation code, .documentation h1, .documentation h2, .documentation p, .documentation ul, .documentation div{
 	margin-bottom: 0.8em;
 }
 
 .documentation code {
-	font-size: 0.9em;
+	font-size: 0.9em !important;
 	color: var(--code-color);
 	background-color: var(--background-result-card) !important;
 	background: #1b263b !important;
@@ -27,7 +32,7 @@
 }
 
 .documentation p, li {
-	font-size: 18px;
+	font-size: 0.64em;
 	color: var(--menu-active-link);
 	margin: 12px 0;
 }
@@ -47,4 +52,10 @@
 
 .documentation h4 {
 	font-size: 0.7em;
+}
+
+@media screen and (max-width: 768px) {
+	.documentation {
+		padding: 50px 20px 0 25px;
+	}
 }

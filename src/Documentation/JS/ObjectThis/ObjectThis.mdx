@@ -1,5 +1,4 @@
-import Alert from '@mui/material/Alert';
-import { CodeEdit, InfoPage } from '../../../components/index.jsx';
+import { CodeEdit, InfoPage, Alerts } from '../../../components/index.jsx';
 
 <InfoPage>
 	[https://uk.javascript.info](https://uk.javascript.info/object-methods#this-v-metodakh)
@@ -147,7 +146,7 @@ admin['f'](); // Адмін (неважливо те, як звертатися 
 
 Правило просте: якщо ```obj.f()``` викликано, то ```this``` це ```obj``` під час виконання ```f```. Так що в даному прикладі це ```user``` або ```admin```.
 
-<Alert severity="info" variant="outlined">
+<Alerts severity="info" variant="outlined">
 	### Виклик без об’єкта: this == undefined
 	Ми можемо навіть викликати функцію взагалі без об’єкта:
 
@@ -163,7 +162,7 @@ sayHi(); // undefined
 	У несуворому режимі значенням ```this``` в такому випадку буде глобальний об’єкт window. Це – поведінка, яка склалася історично та виправляється завдяки використанню суворого режиму ("use strict").
 
 	Зазвичай такий виклик є помилкою програмування. Якщо всередині функції є ```this```, вона очікує виклику в контексті об’єкта.
-</Alert>
+</Alerts>
 
 ## Стрілочні функції не мають “this”
 Стрілочні функції особливі: у них немає “свого” ```this```. Якщо ми посилаємось на ```this``` з такої функції, його значення береться із зовнішньої “нормальної” функції.

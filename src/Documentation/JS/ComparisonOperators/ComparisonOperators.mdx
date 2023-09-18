@@ -1,5 +1,4 @@
-import Alert from '@mui/material/Alert';
-import { CodeEdit, InfoPage } from '../../../components/index.jsx';
+import { CodeEdit, InfoPage, Alerts } from '../../../components/index.jsx';
 
 <InfoPage>
 	[https://uk.javascript.info](https://uk.javascript.info/comparison)
@@ -64,12 +63,12 @@ alert( 'Комар' > 'Кома' ); // true
 1. ```о``` дорівнює ```о```.
 1. ```к``` більше ніж ```д```. На цьому кроці порівнювання закінчується. Перший рядок більший.
 
-<Alert severity="info" variant="outlined">
+<Alerts severity="info" variant="outlined">
 	### Використовується кодування Unicode, а не справжній алфавіт
 	Такий алгоритм порівняння схожий на алгоритм сортування, який використовується в словниках і телефонних довідниках, проте вони не зовсім однакові.
 
 	Наприклад, в JavaScript має значення регістр символів. Велика буква ```"А"``` не рівна маленькій ```"а"```. Але яка з них більше? Маленька буква ```"а"```. Чому? Тому що маленькі букви мають більший код у внутрішній таблиці кодування, яку використовує JavaScript (Unicode). Ми розглянемо особливості і наслідки цього кодування в розділі [Рядки](https://uk.javascript.info/string).
-</Alert>
+</Alerts>
 
 ## Порівняння різних типів
 Коли порівнюються значення різних типів, JavaScript конвертує ці значення в числа.

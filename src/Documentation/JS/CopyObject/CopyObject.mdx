@@ -1,5 +1,4 @@
-import Alert from '@mui/material/Alert';
-import { CodeEdit, InfoPage } from '../../../components/index.jsx';
+import { CodeEdit, InfoPage, Alerts } from '../../../components/index.jsx';
 
 <InfoPage>
 	[https://uk.javascript.info](https://uk.javascript.info/object)
@@ -174,7 +173,7 @@ alert(clone.sizes.width); // 51, бачимо результат в іншому
 
 Для його реалізації ми можемо використати рекурсію. Або, щоб не винаходити колесо, взяти існуючу реалізацію, наприклад [_.cloneDeep(obj)](https://lodash.com/docs#cloneDeep) з бібліотеки JavaScript [lodash](https://lodash.com).
 
-<Alert severity="info" variant="outlined">
+<Alerts severity="info" variant="outlined">
 	### об’єкти у const-змінних можна змінювати
 	Важливим побічним ефектом зберігання об’єктів як посилань є те, що об’єкт, оголошений як const, може бути змінений.
 
@@ -190,4 +189,4 @@ user.name = "Петро"; // (*)
 alert(user.name); // Петро
 `}/>
 	Може здатися, що рядок ```(*)``` призведе до помилки, але це не так. Значення у змінній ```user``` є постійним, воно завжди має посилатися на той самий об’єкт, але властивості цього об’єкта можуть змінюватися.
-</Alert>
+</Alerts>

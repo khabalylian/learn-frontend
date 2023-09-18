@@ -1,6 +1,13 @@
-import { FC, useEffect } from 'react';
-import styles from './CreateExpCard.module.css';
+import React from 'react';
+import { FC, useEffect, ReactNode } from 'react';
+import { CodeEdit } from '../CodeEdit/CodeEdit';
+import ReactMarkdown from 'react-markdown';
 
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { solarizedlight } from 'react-syntax-highlighter/dist/esm/styles/prism';
+
+
+import styles from './CreateExpCard.module.css';
 interface CreateExpCardProps {
     children: string;
     title: string;
@@ -12,11 +19,15 @@ export const CreateExpCard: FC<CreateExpCardProps> = ({
     title,
     id
 }) => {
-    useEffect(() => {
+
+	useEffect(() => {
         const input: NodeListOf<HTMLInputElement> =
             document.querySelectorAll('input[data-exp]');
-        input[id - 1].name = String(id);
-    }, [children, id]);
+			
+		if(input){
+			input[id-1].name = String(id);
+		}
+    }, []);
 
     return (
         <div className={styles.wrapper}>

@@ -15,7 +15,6 @@ export const Main = (): JSX.Element => {
         <Suspense>
                 <div
                     key={typeId}
-                    style={{ position: 'relative', padding: '50px 0' }}
                     className={styles.documentation}
                 >
 					<MotionWrapper>

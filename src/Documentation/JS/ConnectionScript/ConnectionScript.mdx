@@ -1,5 +1,4 @@
-import Alert from '@mui/material/Alert';
-import { CodeEdit, InfoPage } from '../../../components/index.jsx';
+import { CodeEdit, InfoPage, Alerts } from '../../../components/index.jsx';
 
 <InfoPage>
 	[https://uk.javascript.info](https://uk.javascript.info)
@@ -77,7 +76,7 @@ import { CodeEdit, InfoPage } from '../../../components/index.jsx';
 …
 `}/>
 
-<Alert severity="info" variant="outlined">
+<Alerts severity="info" variant="outlined">
 	### Будь ласка, зверніть увагу:
 	Як правило, тільки найпростіші скрипти поміщаються безпосередньо в HTML. Більш складні знаходяться в окремих файлах.
 
@@ -86,9 +85,9 @@ import { CodeEdit, InfoPage } from '../../../components/index.jsx';
 	Інші сторінки, які посилаються на один і той самий скрипт, замість того, щоб завантажувати повторно, будуть брати його з кешу, тому файл буде завантажено лише один раз.
 
 	Це зменшує трафік і робить сторінки швидшими.
-</Alert>
+</Alerts>
 
-<Alert severity="warning" variant="outlined">
+<Alerts severity="warning" variant="outlined">
 	### Якщо вказаний ```src```, вміст скрипта ігнорується.
 	Один тег ```<script>``` не може мати атрибут ```src``` і код всередині.
 
@@ -109,7 +108,7 @@ alert(1); // вміст ігнорується, оскільки задано sr
 alert(1);
 </script>
 `}/>
-</Alert>
+</Alerts>
 
 ## Підсумки
 * Ми можемо використовувати тег ```<script>``` для додавання коду JavaScript на сторінку.

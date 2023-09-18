@@ -5,6 +5,7 @@ import { ResultTesting } from './ResultTesting/ResultTesting.tsx';
 import { TestingComponent } from './TestingComponent/TestingComponent.tsx';
 import { Timer } from './Timer/Timer.tsx';
 import { ResultExp } from './ResultExp/ResultExp.tsx';
+import { Alerts } from './Alert/Alerts.tsx';
 
 export {
     TestCard,
@@ -13,5 +14,6 @@ export {
     ResultTesting,
     TestingComponent,
     Timer,
-    ResultExp
+    ResultExp,
+    Alerts
 };

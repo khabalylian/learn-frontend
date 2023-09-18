@@ -1,16 +1,17 @@
-import { CodeEdit, InfoPage } from '../components/index.jsx';
+import { InfoPage } from '../components/index.jsx';
 import {CreateExpCard} from '../components/CreateExpCard/CreateExpCard.tsx' 
 import styles from '../page-component/ExercisesPage/ExercisesPage.module.css';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { solarizedlight } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 ## Вставте пропущене слово для:
-
 <CreateExpCard title='Получення ключів обєкта' id={1}>
-const myObject = \{
-	&emsp;name: 'John',
-	&emsp;age: 25,
-	&emsp;country: 'USA'
-};
-const keys = Object. <input data-exp="input" className={styles.expInput}/>(myObject);
+	const myObject = \{
+		name: 'John',
+		age: 25,
+		country: 'USA'
+	};
+	const keys = Object. <input data-exp="input" className={styles.expInput}/>(myObject);
 </CreateExpCard>
 
 <CreateExpCard title='Додавання класу елементу' id={2}>
@@ -31,5 +32,6 @@ const keys = Object. <input data-exp="input" className={styles.expInput}/>(myObj
 <CreateExpCard title='Обєднання рядків' id={5}>
 	const str1 = "Hello";
 	const str2 = "World!";
-	const result = str1. <input data-exp="input" name='5' className={styles.expInput}/> (str2);
+	const result = str1. <input data-exp="input" className={styles.expInput}/> (str2);
 </CreateExpCard>
+

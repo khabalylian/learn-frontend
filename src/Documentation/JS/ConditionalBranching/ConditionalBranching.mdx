@@ -1,5 +1,4 @@
-import Alert from '@mui/material/Alert';
-import { CodeEdit, InfoPage } from '../../../components/index.jsx';
+import { CodeEdit, InfoPage, Alerts } from '../../../components/index.jsx';
 
 <InfoPage>
 	[https://developer.mozilla.org](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Statements/if...else)
@@ -74,7 +73,7 @@ let accessAllowed = (age > 18) ? true : false;
 
 Але дужки роблять код більш читабельним, тому ми рекомендуємо їх використовувати.
 
-<Alert severity="info" variant="outlined">
+<Alerts severity="info" variant="outlined">
 	### Будь ласка, зверніть увагу:
 	У наведеному вище прикладі можна уникнути використання оператора “знак питання”, оскільки само порівняння повертає true/false:
 
@@ -82,7 +81,7 @@ let accessAllowed = (age > 18) ? true : false;
 // те ж саме
 let accessAllowed = age > 18;
 `}/>
-</Alert>
+</Alerts>
 
 ## Декілька ‘?’
 Послідовність операторів знака питання ```?``` може повернути значення, яке залежить від більш ніж однієї умови.

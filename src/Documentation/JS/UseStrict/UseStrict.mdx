@@ -1,5 +1,4 @@
-import Alert from '@mui/material/Alert';
-import { CodeEdit, InfoPage } from '../../../components/index.jsx';
+import { CodeEdit, InfoPage, Alerts } from '../../../components/index.jsx';
 
 <InfoPage>
 	[https://uk.javascript.info](https://uk.javascript.info)
@@ -26,7 +25,7 @@ import { CodeEdit, InfoPage } from '../../../components/index.jsx';
 `}/>
 Незабаром ми будемо вивчати функції (такий собі спосіб групування команд). Забігаючи наперед, маймо на увазі, що ```"use strict"``` можна писати на початку функції. Таким чином, суворий режим буде використовуватися лише в межах цієї функції. Проте зазвичай люди використовують цей режим для всього скрипта.
 
-<Alert severity="warning" variant="outlined">
+<Alerts severity="warning" variant="outlined">
 	### Переконайтеся, що “use strict” написано зверху
 	Будь ласка, завжди переконуйтеся в тому, що директива ```"use strict"``` написана зверху ваших скриптів, інакше суворий режим не увімкнеться.
 
@@ -40,14 +39,14 @@ alert("деякий код");
 // суворий режим не активовано
 `}/>
 	Лише коментарі можуть бути вище ```"use strict"```.
-</Alert>
+</Alerts>
 
-<Alert severity="warning" variant="outlined">
+<Alerts severity="warning" variant="outlined">
 	### Неможливо скасувати ```use strict```
 	Немає директиви на зразок ```"no use strict"```, яка могла б вернути старий режим.
 
 	Як тільки ми увійшли в суворий режим, назад дороги немає.
-</Alert>
+</Alerts>
 
 ## Консоль браузера
 Коли ви використовуєте консоль розробника для виконання коду, майте на увазі, що консоль усталено не використовує суворий режим.

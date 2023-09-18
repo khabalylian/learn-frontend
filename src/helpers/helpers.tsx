@@ -30,4 +30,5 @@ const MotionWrapper: FC<PropsWithChildren> = ({children}) => {
     );
 }
 
-export { getData, MotionWrapper };
+
+export { getData, MotionWrapper};

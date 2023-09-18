@@ -4,8 +4,13 @@
 }
 
 .codeBlock {
-	font-size: 17px !important;
+	width: fit-content;
+	font-size: 0.6em !important;
 	background: #1b263b !important;
+}
+
+.codeBlock div {
+	padding-right: 40px;
 }
 
 .codeBlock span, .codeBlock div {
@@ -22,4 +27,29 @@
 
 .standart {
 	background: inherit;
+}
+
+@media screen and (max-width: 768px) {
+	.codeBlock {
+		max-width: 400px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.codeBlock {
+		max-width: 320px;
+	}
+}
+
+@media screen and (max-width: 420px) {
+	.codeBlock {
+		max-width: 200px;
+	}
+
+	.codeBlock button {
+		display: flex;
+		align-content: center;
+		max-width: 20px;
+		max-height: 20px;
+	}
 }
