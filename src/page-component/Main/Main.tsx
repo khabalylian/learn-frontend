@@ -12,7 +12,7 @@ export const Main = (): JSX.Element => {
     );
 
     return (
-        <Suspense>
+        <Suspense fallback={<div>Loading...</div>}>
                 <div
                     key={typeId}
                     className={styles.documentation}

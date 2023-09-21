@@ -13,35 +13,32 @@ import {
 const App = (): JSX.Element => {
 
     return (
-		<div className='app'>
-			<Routes>
-				<Route path='/' />
-				<Route path=':id'>
-					<Route
-						index
-						element={<h2>Виберіть тему для вивчення!</h2>}
-					/>
-					<Route path=':title'>
-						<Route
-							index
-							element={<h2>Виберіть тему для вивчення!</h2>}
-						/>
-						<Route path=':typeId' element={<Main />} />
-					</Route>
-				</Route>
-				<Route path='/test'>
-					<Route index element={<Test />} />
-					<Route path=':select' element={<TestingComponent />} />
-				</Route>
-				<Route path='literature' element={<LiteraturePage />} />
-				<Route
-					path='quickQuestions'
-					element={<QuickQuestionsPage />}
-				/>
-				<Route path='handbook' element={<Handbook />} />
-				<Route path='exp' element={<ExercisesPage />} />
-			</Routes>
-		</div>
+        <div className='app'>
+            <Routes>
+                <Route index element={<h2>Виберіть тему для вивчення!</h2>} />
+                <Route path=':id'>
+                    <Route
+                        index
+                        element={<h2>Виберіть тему для вивчення!</h2>}
+                    />
+                    <Route path=':title'>
+                        <Route
+                            index
+                            element={<h2>Виберіть тему для вивчення!</h2>}
+                        />
+                        <Route path=':typeId' element={<Main />} />
+                    </Route>
+                </Route>
+                <Route path='/test'>
+                    <Route index element={<Test />} />
+                    <Route path=':select' element={<TestingComponent />} />
+                </Route>
+                <Route path='literature' element={<LiteraturePage />} />
+                <Route path='quickQuestions' element={<QuickQuestionsPage />} />
+                <Route path='handbook' element={<Handbook />} />
+                <Route path='exp' element={<ExercisesPage />} />
+            </Routes>
+        </div>
     );
 };
 
