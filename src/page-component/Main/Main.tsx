@@ -7,20 +7,20 @@ import { MotionWrapper } from '../../helpers/helpers';
 export const Main = (): JSX.Element => {
     const { typeId, id } = useParams();
 	
-    const MyLazyComp = lazy(
-        () => import(`../../Documentation/${id}/${typeId}/${typeId}.mdx`)
-    );
+	async function MyLazyComp () {
+		await import(`../../Documentation/${id}/${typeId}/${typeId}.mdx`)
+			.then(data => console.log(data))
+	}
+
+	console.log(MyLazyComp())
 
     return (
-        <Suspense fallback={<div>Loading...</div>}>
-                <div
-                    key={typeId}
-                    className={styles.documentation}
-                >
-					<MotionWrapper>
-                   		<MyLazyComp />
-					</MotionWrapper>
-                </div>
+        <Suspense>
+            <div key={typeId} className={styles.documentation}>
+                <MotionWrapper>
+                   
+                </MotionWrapper>
+            </div>
         </Suspense>
     );
 };

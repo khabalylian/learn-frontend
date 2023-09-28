@@ -9,9 +9,23 @@ module.exports = {
             });
 
             return webpackConfig;
-        }
+			
+        },
+		configure: (webpackConfig) => {
+      // Додаємо правило для обробки MDX файлів
+		webpackConfig.module.rules.push({
+			test: /\.mdx$/,
+			use: [
+			{
+				loader: 'babel-loader', // Використовуємо Babel для трансляції MDX
+			},
+			{
+				loader: '@mdx-js/loader', // Використовуємо @mdx-js/loader для обробки MDX
+			},
+			],
+		});
     },
     devServer: {
         port: 5000
     }
-};
+}}
