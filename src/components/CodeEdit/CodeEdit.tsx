@@ -1,5 +1,5 @@
 import styles from './CodeEdit.module.css';
-import React, { ReactNode } from 'react';
+import React from 'react';
 import cn from 'classnames';
 
 import { CopyBlock, dracula } from 'react-code-blocks';
